@@ -174,7 +174,7 @@ languages:
   
 projects:
   - name: Mi-Mi
-    image: r/mimi.png
+    image: r/MiMi.png
     description:
       Mitho-Mitho is a web application designed to let foodies search restaurants,
       track their eating history, as well as connect with friends. If you have trouble 
