@@ -1,0 +1,207 @@
+name: Aayush Adhikari
+title: (Remote) software developer
+contact:
+  email: adhikariaayush37@gmail.com
+  github: https://github.com/aayush518
+  gitlab: https://gitlab.com/aayush518
+  linkedin: https://linkedin.com/in/aayush518
+bio:
+  - Hello from Pokhara, Nepal! I'm deeply passionate about the tech world, 
+    focusing on data science, graphic design, and full-stack web development.
+    Currently pursuing a Bachelor's degree in Computer Science at [Your University/School Name], 
+    I'm embracing the ever-evolving tech landscape.
+    My skill set spans various web development frameworks like Flask, FastAPI, and Django, 
+    coupled with a flair for front-end technologies such as HTML, CSS, and Vue.js. On the creative side, 
+    I bring design ideas to life using tools like Illustrator and Figma.
+    Data science captivates me, and I've delved into web scraping using tools like Selenium and Scrapy,
+    extracting valuable insights from diverse datasets. Beyond the classroom, I actively apply my skills
+    in hackathons and collaborative projects.
+    Based in the beautiful city of Pokhara, I'm excited to contribute to the local tech community and explore 
+    opportunities that align with my passion and expertise. If your organization is on the lookout for a tech 
+    enthusiast ready to make a positive impact, I'd love to connect!
+  # - In my adventures, I combined biology and programming because I was
+  #   fascinated by how living things resemble computers. Programming life is a
+  #   problem just as difficult and satisfying as programming silicon.
+  - I'm looking for interesting and challenging employment at a remote-friendly
+    company with a great culture and opportunities for advancement. Let's talk
+    together about solving problems with technology.
+
+location: Capable of working remotely. Living in **Pokhara**, Nepal.  
+
+education:
+  - title: BE Computer Science and Information Technology
+    year: 
+      - 2019
+      - present
+    institution: IOE Paschimanchal Campus
+    
+  - title: Higher Secondary Education
+    year: 2019
+    institution: Godawari Vidhya Mandir (Sushma Godawari CSIT College)
+    remarks:
+      - Studied **Physics**, **Chemistry**, **Mathematics**, and **Computer
+        Science**.
+experience:
+  - title: Computer Instructor (Part-time)
+    place: Crimson Education Hub, Belbari
+    year:
+      - 2019
+      - 2020
+    tag: technical
+    remarks:
+     - "Taught different technologies based on the student's interest and the syllabus of computer operator post of Lok Sewa Aayog."
+    technologies:
+      - Computer Fundamentals
+      - English Typing
+      - Nepali Typing
+      - Microsoft Paint
+      - Microsoft Word
+      - Microsoft Excel
+      - Microsoft PowerPoint
+      - Microsoft Access
+      - Adobe PageMaker
+      - Adobe Photoshop
+      - Adobe Illustrator
+      - HTML
+      - CSS
+      - Basic JavaScript
+      - Tally ERP 9
+      - Basic Computer Hardware
+
+  - title: Tutor (Part-time)
+    place: Crimson Education Hub, Belbari, Destiny Tution Center, Belbari, Worldwide Consultancy, Belbari, and Home Tutoring
+    year:
+      - 2016
+      - 2022
+    tag: people
+    remarks:
+      - Taught all subjects to students from grades 6 to 10.
+      - Taught **Physics**, **Chemistry**, and **Mathematics** to students from grades 11 to 12.
+      - Taught  **Business Mathematics** to students of grades 12.
+      - Taught **Computer Science** to students of grades 11 and 12.
+    
+  - title: Coaching Teacher (Part-time)
+    place: Shree Bhanu Memorial English Boarding School, Belbari
+    year: 2020
+    tag: people
+    remarks:
+      - Taught **Science** to students of grades 9 to 10.
+
+  - title: Content Writer 
+    year: 
+      - 2018 
+      - present
+    tag: technical
+    remarks:
+      - Wrote articles on various topics for different websites.
+      - Wrote stories and scripts for short films like **Antyako Suruwat** and **Katha**.
+      - Wrote tecnical articles, blogs for tazakhabar.me, and other websites.
+      - Worked as freelancer for different websites.
+
+  - title: Graphic Designer
+    year:
+      - 2018 
+      - present
+    tag: technical
+    remarks:
+     - "Designed logos, posters, banners, and other graphics for different clients."
+
+  - title: Web Developer
+    year:
+      - 2018 
+      - present
+    tag: technical
+    remarks:
+      - "Worked on outsourcing projects."
+      - "Developed websites for different clients."
+      - Developed websites for my own projects.
+
+  - title: WordPress Developer
+    year: 
+      - 2018 
+      - present
+    tag: technical
+    remarks:
+      - Developed WordPress websites for different clients.
+      - Developed WordPress websites for my own projects. 
+        [Visit one of my website](https://tazakhabar.me/).
+      - Worked on outsourcing projects.
+    
+  - title: Marketing Executive
+    place: Mathematics Initiatives in Nepal (MIN)
+    year: 
+      - 2020 
+      - 2021
+    tag: people
+    remarks:
+      - "Volunteered as a marketing executive first then promoted to the post of deputy head of marketing department."
+      - "Got the opportunity to work with the team of 20+ brilliant minds."
+      - "Promoted the organization and its events like Girls Mathemaics Olympiad (GMO), International Women's Day for Mathematics (IWDM), Education for All (EFA), and many more."
+      - "Managed the social media marketing campaigns and day-to-day activities."
+      
+
+    
+skills:
+  HTML: 5
+  CSS: 4
+  JS/Typescript/Node: 4
+  React/Vue: 4
+  Linux: 4
+  Git: 4
+  Go: 4
+  C/C++: 4
+  Python: 4
+  SQL/RDBMS: 4
+  NoSQL: 4
+  Mathematica: 4
+  Matlab: 4
+  Rust: 2
+  Figma: 4
+  Adobe Illustrator: 4
+  Adobe Photoshop: 4
+  Flask: 4
+  FastAPI: 4
+  Django: 3
+  WordPress: 4
+  Zola: 4
+  Tally ERP 9: 4
+  Microsoft Office: 4
+
+languages:
+  English: Fluent
+  Nepali: Native
+  Hindi: Fluent
+  
+projects:
+  - name: Mi-Mi
+    image: r/mimi.png
+    description:
+      Mitho-Mitho is a web application designed to let foodies search restaurants,
+      track their eating history, as well as connect with friends. If you have trouble 
+      remembering what restaurants you’ve been to before, or what you’ve ordered at a 
+      restaurant that was good, then Mitho-Mitho is your go-to app.
+      Search for restaurants by name or address. With the queried results, you can select
+      and add a restaurant that you have visited 
+      to your own personal map, leaving behind a trail of Mitho-Mithos for your
+      restaurant history. Connect with friends to see where your 
+      friends have dined at and what dishes they've tried. Mitho-Mitho is a social media 
+      network built for foodies.
+      
+    links:
+      code: https://github.com/Aayush518/Mitho-Mitho
+  - name: qrScanningOpenCVpyzbar
+    image: r/qropencvpyzbar.png
+    description:
+      This is a simple QR Code Scanner using OpenCV and PyZbar.
+      Features include real-time QR Code decoding using webcam and convex hull visualization around detected QR Codes.
+
+    links:
+      code: https://github.com/Aayush518/qrScanningOpen-CVpyzbar
+
+  - name: NewsScrape
+    image: 
+    description:
+      NewsScrape is a Python script that processes and beautifies news data from a JSON file. It extracts content from URLs, removes special characters, and rephrases the content for a cleaner presentation.
+    links:
+      code: https://github.com/Aayush518/NewsScrape
+publications: []

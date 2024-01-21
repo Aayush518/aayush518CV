@@ -55,18 +55,23 @@
     "source-map-js": "^1.0.2",
     "source-map-resolve": "^0.5.3",
     "source-map-url": "^0.4.1",
-    "stylus": "^0.54.8",
     "supports-color": "^7.2.0",
     "supports-preserve-symlinks-flag": "^1.0.0",
     "urix": "^0.1.0",
     "vue": "^2.7.16",
     "vue-server-renderer": "^2.7.16",
-    "vue-template-compiler": "^2.7.16",
     "wrappy": "^1.0.2",
     "yaml": "^1.10.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@vue/cli-service": "^5.0.8",
+    "stylus": "^0.62.0",
+    "stylus-loader": "^8.0.0",
+    "vue-loader": "^17.4.2",
+    "vue-template-compiler": "^2.7.16"
+  },
   "scripts": {
+    "build": "vue-cli-service build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

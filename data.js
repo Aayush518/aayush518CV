@@ -7,10 +7,13 @@ module.exports = {
     gitlab: 'https://gitlab.com/aayush518',
     linkedin: 'https://linkedin.com/in/aayush518',
   },
-  bio: [
-    'I\'m a computer scientist, a genetic engineer, a mentor, and a successful geek. I love to share my passion for technology with everyone around me. I live in Lausanne, Switzerland, where I\'m working towards a Master\'s degree at École Polytechnique Fédérale de Lausanne in one of the best computer science courses in the world.',
-    'In my adventures, I combined biology and programming because I was fascinated by how living things resemble computers. Programming life is a problem just as difficult and satisfying as programming silicon. I\'m now looking for other difficult and satisfying problems. Perhaps your company has some. I can help solve them.',
-  ],
+  bio:[
+    'Hailing from the picturesque city of Pokhara, nestled in the heart of Nepal, I am a tech enthusiast with a keen interest in data science, graphic design, and full-stack web development. Currently navigating the academic landscape, I am pursuing a Bachelor\'s degree in Computer Science at [Your University/School Name], where I am immersing myself in the diverse and ever-evolving world of technology.',
+    'My technical toolkit includes proficiency in web development frameworks such as Flask, FastAPI, and Django, alongside mastery of front-end technologies like HTML, CSS, and Vue.js. Additionally, my creative side finds expression through design tools such as Illustrator and Figma, allowing me to blend functionality with aesthetics in my projects.',
+    'Data science fuels my curiosity, and I have honed my skills in web scraping using tools like Selenium and Scrapy. This enables me to extract meaningful insights from varied datasets, contributing to the broader realm of data-driven decision-making.',
+    'While I am deeply engaged in my academic pursuits, I also actively apply my skills in practical settings, participating in hackathons and collaborative initiatives. As I navigate the vibrant tech community in Pokhara, I am excited about contributing my unique skill set to projects that push the boundaries of innovation.',
+    'If your organization is seeking a tech enthusiast with a diverse skill set, a creative mindset, and a passion for making a positive impact, I am eager to explore opportunities that align with my interests and expertise.'
+],
   location: 'Capable of working remotely. Living in **Lausanne**, Switzerland. Citizen of the **Slovak Republic** (EU) and **Canada**. Swiss permit B.',
   education: [
     {

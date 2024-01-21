@@ -60,7 +60,7 @@ const marked = require("marked");
 
 <template>
   <div class="container mt-3">
-    <h1>Martin Hanzel</h1>
+    <h1>Aayush Adhikari</h1>
     <p class="lead">(Remote) software developer</p>
     <!-- TODO: Add hashes and permalinks to headers -->
 
@@ -78,13 +78,13 @@ const marked = require("marked");
     <hr />
     <p>
       I like boring, automatable solutions. My full CV is available as machine- and human-readable
-      <a href="martin-hanzel-cv.json">JSON</a>
+      <a href="aayush-adhikari-cv.json">JSON</a>
       and
-      <a href="martin-hanzel-cv.yml" type="text/plain">YAML</a>
+      <a href="aayush-adhikari-cv.yml" type="text/plain">YAML</a>
       files.
       <!-- There is also a one-page
       <a
-        href="martin-hanzel-resume-onepage.pdf"
+        href="aayush-adhikari-resume-onepage.pdf"
       >PDF</a>. -->
     </p>
     <p v-html="markdown(data.location)"></p>
@@ -98,7 +98,7 @@ const marked = require("marked");
     <h2>Technical experience</h2>
     <Job v-for="(job, i) in technical" :key="i" :job="job" />
 
-    <h2>Leadership and management experience</h2>
+    <h2>Leadership, Management and Tutoring experience</h2>
     <Job v-for="(job, i) in management" :key="i" :job="job" />
 
     <h2>Skills</h2>

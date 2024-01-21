@@ -25,8 +25,11 @@ const marked = require("marked");
       {{formatYear(ed.year)}}
     </p>
     <p>
-      <strong>Research:</strong>
-      {{research}}
+      
+      <strong>Remarks:</strong>
+      <br />
+
+      <span v-html="Array.isArray(ed.remarks) ? ed.remarks.join(', ').replace(/\*\*(.*?)\*\*/g, '<b style=\'color:grey\'>$1</b>') : ed.remarks"></span>
     </p>
   </div>
 </template>

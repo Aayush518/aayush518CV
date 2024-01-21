@@ -4,4 +4,4 @@ all:
 
 .PHONY: watch
 watch: all
-	watchman-make -p "**/*.vue" "*.js" "*.styl" "template.html" -r "node build.js"
+	watchman-make -p "**/*.vue" "*.js" "*.styl" "template.html" "aayush-adhikari-cv.yml" -r "node build.js"
