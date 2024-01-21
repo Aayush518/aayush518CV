@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Martin Hanzel</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,600|Source+Code+Pro:500">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+  <!-- TODO: New favicons, and base64-embed them -->
+
+  <style type="text/css">
+body:not(.dark) {
+  background-color: #f5f3ef;
+  color: #657b83;
+  transition: background-color 1s, color 1s, border-color 1s, box-shadow 1s;
+}
+body:not(.dark) strong {
+  color: #47626a;
+  transition: background-color 1s, color 1s, border-color 1s, box-shadow 1s;
+}
+body:not(.dark) h1,
+body:not(.dark) h2 {
+  color: #3085bf;
+  transition: background-color 1s, color 1s, border-color 1s, box-shadow 1s;
+}
+body:not(.dark) h3 {
+  color: #47626a;
+  transition: background-color 1s, color 1s, border-color 1s, box-shadow 1s;
+}
+body:not(.dark) hr {
+  border-color: #d2d2c5;
+  transition: background-color 1s, color 1s, border-color 1s, box-shadow 1s;
+}
+body:not(.dark) .card {
+  background-color: #faf9f7;
+  box-shadow: 2px 2px 20px 0px #ece8e0;
+  transition: background-color 1s, color 1s, border-color 1s, box-shadow 1s;
+}
+body:not(.dark) .x-sep,
+body:not(.dark) .y-sep {
+  border-color: #d2d2c5;
+  transition: background-color 1s, color 1s, border-color 1s, box-shadow 1s;
+}
+body:not(.dark) .star,
+body:not(.dark) .half-star,
+body:not(.dark) .empty-star {
+  filter: opacity(50%);
+  transition: filter 1s;
+}
+body:not(.dark) a {
+  color: #268bd2;
+  transition: background-color 1s, color 1s, border-color 1s, box-shadow 1s;
+}
+body:not(.dark) .switch-theme {
+  background-color: #073642;
+  border-color: #839496;
+}
+body.dark {
+  background-color: #002b36;
+  color: #839496;
+  transition: background-color 1s, color 1s, border-color 1s, box-shadow 1s;
+}
+body.dark strong {
+  color: #a5afab;
+  transition: background-color 1s, color 1s, border-color 1s, box-shadow 1s;
+}
+body.dark h1,
+body.dark h2 {
+  color: #2b88c8;
+  transition: background-color 1s, color 1s, border-color 1s, box-shadow 1s;
+}
+body.dark h3 {
+  color: #a5afab;
+  transition: background-color 1s, color 1s, border-color 1s, box-shadow 1s;
+}
+body.dark hr {
+  border-color: #1f4651;
+  transition: background-color 1s, color 1s, border-color 1s, box-shadow 1s;
+}
+body.dark .card {
+  background-color: #003644;
+  box-shadow: 2px 2px 20px 0px #002731;
+  transition: background-color 1s, color 1s, border-color 1s, box-shadow 1s;
+}
+body.dark .x-sep,
+body.dark .y-sep {
+  border-color: #1f4651;
+  transition: background-color 1s, color 1s, border-color 1s, box-shadow 1s;
+}
+body.dark .star,
+body.dark .half-star,
+body.dark .empty-star {
+  filter: invert() opacity(45%);
+  transition: filter 1s;
+}
+body.dark a {
+  color: #b58900;
+  transition: background-color 1s, color 1s, border-color 1s, box-shadow 1s;
+}
+body.dark .switch-theme {
+  background-color: #eee8d5;
+  border-color: #657b83;
+  transition: background-color 1s, color 1s, border-color 1s, box-shadow 1s;
+}
+.theme-switcher {
+  cursor: pointer;
+  font: 13px 'Source Code Pro', Consolas, monospace;
+  position: fixed;
+  right: 16px;
+  top: 16px;
+}
+.theme-switcher:hover span {
+  text-decoration: underline;
+}
+.theme-switcher .switch-theme {
+  border-radius: 99px;
+  border-style: solid;
+  border-width: 0px;
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  vertical-align: middle;
+}
+body {
+  font: 500 16px 'Open Sans', Arial, sans-serif;
+}
+body h3 {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+body strong {
+  font-weight: 600;
+}
+p {
+  margin-bottom: 0.5rem;
+}
+p:last-child {
+  margin-bottom: 0;
+}
+h1,
+h2 {
+  font-family: 'Source Code Pro', Consolas, monospace;
+  font-weight: 500;
+  margin-bottom: 16px;
+  margin-top: 20px;
+  position: relative;
+}
+h1::before,
+h2::before {
+  position: absolute;
+}
+h1::before {
+  content: "#";
+  left: -28px;
+}
+@media (max-width: 1020px) {
+  h1::before {
+    display: none;
+  }
+}
+h2::before {
+  content: "##";
+  left: -42px;
+}
+@media (max-width: 1020px) {
+  h2::before {
+    display: none;
+  }
+}
+hr {
+  border-style: dashed;
+}
+.lead {
+  font-weight: 400;
+}
+.star,
+.half-star,
+.empty-star {
+  background-repeat: no-repeat;
+  background-position: left center;
+  display: inline-block;
+  height: 1em;
+  vertical-align: baseline;
+  width: 16px;
+}
+.star {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgZm9jdXNhYmxlPSJmYWxzZSIgZGF0YS1wcmVmaXg9ImZhcyIgZGF0YS1pY29uPSJzdGFyIiBjbGFzcz0ic3ZnLWlubGluZS0tZmEgZmEtc3RhciBmYS13LTE4IiByb2xlPSJpbWciIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDU3NiA1MTIiPjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZD0iTTI1OS4zIDE3LjhMMTk0IDE1MC4yIDQ3LjkgMTcxLjVjLTI2LjIgMy44LTM2LjcgMzYuMS0xNy43IDU0LjZsMTA1LjcgMTAzLTI1IDE0NS41Yy00LjUgMjYuMyAyMy4yIDQ2IDQ2LjQgMzMuN0wyODggNDM5LjZsMTMwLjcgNjguN2MyMy4yIDEyLjIgNTAuOS03LjQgNDYuNC0zMy43bC0yNS0xNDUuNSAxMDUuNy0xMDNjMTktMTguNSA4LjUtNTAuOC0xNy43LTU0LjZMMzgyIDE1MC4yIDMxNi43IDE3LjhjLTExLjctMjMuNi00NS42LTIzLjktNTcuNCAweiI+PC9wYXRoPjwvc3ZnPg==");
+}
+.half-star {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgZm9jdXNhYmxlPSJmYWxzZSIgZGF0YS1wcmVmaXg9ImZhcyIgZGF0YS1pY29uPSJzdGFyLWhhbGYtYWx0IiBjbGFzcz0ic3ZnLWlubGluZS0tZmEgZmEtc3Rhci1oYWxmLWFsdCBmYS13LTE3IiByb2xlPSJpbWciIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDUzNiA1MTIiPjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZD0iTTUwOC41NSAxNzEuNTFMMzYyLjE4IDE1MC4yIDI5Ni43NyAxNy44MUMyOTAuODkgNS45OCAyNzkuNDIgMCAyNjcuOTUgMGMtMTEuNCAwLTIyLjc5IDUuOS0yOC42OSAxNy44MWwtNjUuNDMgMTMyLjM4LTE0Ni4zOCAyMS4yOWMtMjYuMjUgMy44LTM2Ljc3IDM2LjA5LTE3Ljc0IDU0LjU5bDEwNS44OSAxMDMtMjUuMDYgMTQ1LjQ4Qzg2Ljk4IDQ5NS4zMyAxMDMuNTcgNTEyIDEyMi4xNSA1MTJjNC45MyAwIDEwLTEuMTcgMTQuODctMy43NWwxMzAuOTUtNjguNjggMTMwLjk0IDY4LjdjNC44NiAyLjU1IDkuOTIgMy43MSAxNC44MyAzLjcxIDE4LjYgMCAzNS4yMi0xNi42MSAzMS42Ni0zNy40bC0yNS4wMy0xNDUuNDkgMTA1LjkxLTEwMi45OGMxOS4wNC0xOC41IDguNTItNTAuOC0xNy43My01NC42em0tMTIxLjc0IDEyMy4ybC0xOC4xMiAxNy42MiA0LjI4IDI0Ljg4IDE5LjUyIDExMy40NS0xMDIuMTMtNTMuNTktMjIuMzgtMTEuNzQuMDMtMzE3LjE5IDUxLjAzIDEwMy4yOSAxMS4xOCAyMi42MyAyNS4wMSAzLjY0IDExNC4yMyAxNi42My04Mi42NSA4MC4zOHoiPjwvcGF0aD48L3N2Zz4=");
+}
+.empty-star {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgZm9jdXNhYmxlPSJmYWxzZSIgZGF0YS1wcmVmaXg9ImZhciIgZGF0YS1pY29uPSJzdGFyIiBjbGFzcz0ic3ZnLWlubGluZS0tZmEgZmEtc3RhciBmYS13LTE4IiByb2xlPSJpbWciIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDU3NiA1MTIiPjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZD0iTTUyOC4xIDE3MS41TDM4MiAxNTAuMiAzMTYuNyAxNy44Yy0xMS43LTIzLjYtNDUuNi0yMy45LTU3LjQgMEwxOTQgMTUwLjIgNDcuOSAxNzEuNWMtMjYuMiAzLjgtMzYuNyAzNi4xLTE3LjcgNTQuNmwxMDUuNyAxMDMtMjUgMTQ1LjVjLTQuNSAyNi4zIDIzLjIgNDYgNDYuNCAzMy43TDI4OCA0MzkuNmwxMzAuNyA2OC43YzIzLjIgMTIuMiA1MC45LTcuNCA0Ni40LTMzLjdsLTI1LTE0NS41IDEwNS43LTEwM2MxOS0xOC41IDguNS01MC44LTE3LjctNTQuNnpNMzg4LjYgMzEyLjNsMjMuNyAxMzguNEwyODggMzg1LjRsLTEyNC4zIDY1LjMgMjMuNy0xMzguNC0xMDAuNi05OCAxMzktMjAuMiA2Mi4yLTEyNiA2Mi4yIDEyNiAxMzkgMjAuMi0xMDAuNiA5OHoiPjwvcGF0aD48L3N2Zz4=");
+}
+.job {
+  margin-top: 0;
+  padding-bottom: 8px;
+}
+.job + .job {
+  padding-top: 8px;
+}
+.job ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.job ul li + li {
+  margin-top: 6px;
+}
+.x-sep + .x-sep {
+  border-left: 1px dashed #d2d2c5;
+}
+@media (max-width: 992px) {
+  .x-sep + .x-sep {
+    border-left: 0;
+  }
+}
+.y-sep + .y-sep {
+  border-top: 1px dashed #d2d2c5;
+}
+footer {
+  margin-top: 48px;
+  opacity: 0.05;
+}
+footer::selection {
+  background: 0;
+}
+
+  </style>
+</head>
+
+<body class="">
+  <!-- Change to dark theme at night -->
+  <script type="text/javascript">
+  const hour = new Date().getHours();
+  if (hour < 9 || hour >= 18) {
+    document.body.classList.add('dark');
+  }
+  </script>
+
+  <!-- TODO: Fade on change theme -->
+
+  <div class="theme-switcher d-none">
+    <span>switch theme</span>
+    <div class="switch-theme"></div>
+  </div>
+
+  <div data-server-rendered="true" class="container mt-3"><h1>Martin Hanzel</h1> <p class="lead">(Remote) software developer</p> <p class="lead"><strong>email</strong>:
+    <span class="base64">base64:bWFydGluQGhhbnplbC5pbw==</span> <br> <strong>github</strong>:
+    <a href="https://github.com/arthanzel">@arthanzel</a> <br> <strong>gitlab</strong>:
+    <a href="https://gitlab.com/arthanzel">@arthanzel</a></p> <p>I&#39;m a computer scientist, a genetic engineer, a mentor, and a successful geek. I love to share my passion for technology with everyone around me. I live in Lausanne, Switzerland, where I&#39;m working towards a Master&#39;s degree at <a href="https://www.epfl.ch/en/">EPFL</a> in one of the best computer science courses in the world.
+</p><p>I&#39;m looking for interesting and challenging employment at a remote-friendly company with a great culture and opportunities for advancement. Let&#39;s talk together about solving problems with technology.
+</p> <hr> <p>
+    I like boring, automatable solutions. My full CV is available as machine- and human-readable
+    <a href="martin-hanzel-cv.json">JSON</a>
+    and
+    <a href="martin-hanzel-cv.yml" type="text/plain">YAML</a>
+    files.
+    </p> <p>Capable of working remotely. Living in <strong>Lausanne</strong>, Switzerland. Able to live+work in Canada, EU, and Switzerland.
+</p> <h2>Education</h2> <div class="row justify-content-center"><div class="col-lg col-md-6 col-12 mb-3 text-md-center"><h3>Master of Computer Science</h3> <i></i> <p>
+    École Polytechnique Fédérale de Lausanne
+    <br>
+    2019 - present
+  </p> <p><strong>Research:</strong>
+    Machine Learning, Languages, Distributed Systems
+  </p></div><div class="col-lg col-md-6 col-12 mb-3 text-md-center"><h3>B.Sc. Computer Science</h3> <i>Summa Cum Laude</i> <p>
+    University of Ottawa
+    <br>
+    2017 - 2019
+  </p> <p><strong>Research:</strong>
+    Web Technologies, Privacy and Security, Blockchain
+  </p></div><div class="col-lg col-md-6 col-12 mb-3 text-md-center"><h3>B.Sc. Biomedical Science</h3> <i>Magna Cum Laude</i> <p>
+    University of Ottawa
+    <br>
+    2013 - 2017
+  </p> <p><strong>Research:</strong>
+    Biological Computation, Genetic Engineering, Ecological Modelling
+  </p></div></div> <h2>Technical experience</h2> <div class="row job y-sep"><div class="col-md-4"><h3>Software Developer (Student)</h3> <p class="pl-3">eSMART Technologies SA</p> <p class="pl-3 mb-2">2020 - 2021</p></div> <div class="col-md-8"><ul><li>Architected a <strong>microservice-based</strong>, <strong>IoT</strong> messaging system for internet-connected smart homes, capable of scaling to 100,000s of messages per second.
+</li><li>Overhauled existing security architecture to a <strong>token-based</strong> scheme and enhanced security of device discovery and pairing protocols.
+</li><li>Designed an <strong>HTTP</strong> and <strong>WebSocket</strong> API for inter-device messaging.
+</li><li>Evaluated database software for <strong>performance</strong>, <strong>data warehousing</strong>, and <strong>data-gathering</strong>.
+</li><li>Created automated provisioning and deployment processes for <strong>cloud infrastructure</strong>.
+</li><li>Partially <strong>remote</strong>.
+</li> <li><strong>Keywords:</strong> DevOps, Typescript, WebSockets, Vue.js, PostgreSQL, MySQL, TimescaleDB, RabbitMQ, Eclipse Mosquitto, AWS
+      </li></ul></div></div><div class="row job y-sep"><div class="col-md-4"><h3>Frontend Engineer (Remote)</h3> <p class="pl-3">GitLab Inc.</p> <p class="pl-3 mb-2">2019</p></div> <div class="col-md-8"><ul><li>Self-managed tasks in an <strong>all-remote</strong> team of people from around the world.
+</li><li>Participated in <strong>code reviews</strong> daily.
+</li><li>Realized UI designs in <strong>responsive CSS</strong> for four or more device sizes.
+</li><li>Created new <strong>UI components</strong> and migrated legacy jQuery code to <strong>ES6 + Vue</strong>.
+</li><li>Practiced <strong>TDD</strong> and contributed to the migration of the test suite from Karma to Jest.
+</li><li>Patched <strong>security</strong> holes in frontend code and managed security backports.
+</li><li>Wrote at least as many lines of tests than production code, with <strong>100% coverage</strong>.
+</li> <li><strong>Keywords:</strong> Asynchronous, HTML/CSS, JavaScript, Vue.js, Ruby, Git
+      </li></ul></div></div><div class="row job y-sep"><div class="col-md-4"><h3>Web Developer</h3> <p class="pl-3">Pivotree</p> <p class="pl-3 mb-2">2011 - 2018</p></div> <div class="col-md-8"><ul><li>Led <strong>R&amp;D</strong> for next-generation <strong>e-commerce</strong> applications using <strong>isomorphic rendering</strong> and <strong>microservices</strong>.
+</li><li>Developed <strong>full-stack</strong> B2B and B2C e-commerce applications for large retailers using the <strong>Oracle Commerce</strong> framework.
+</li><li>Worked <strong>remotely</strong> from Valencia, Spain while collaborating with a team in Ottawa, Canada.
+</li><li>Clients include: Princess Auto, Lorex, Simons, and Videotron.
+</li> <li><strong>Keywords:</strong> Agile, Java/J2EE, JSP, JavaScript, React/Redux, Oracle Commerce, OracleDB, MySQL
+      </li></ul></div></div><div class="row job y-sep"><div class="col-md-4"><h3>Freelance Web Developer</h3> <!----> <p class="pl-3 mb-2">2013 - 2015</p></div> <div class="col-md-8"><ul><li>Designed and developed <strong>custom webapps</strong> for student groups at the University of Ottawa.
+</li><li>Worked closely with clients to deliver and maintain <strong>pixel-perfect</strong> solutions.
+</li><li>Clients include: University of Ottawa Healthcare Symposium, Actions for Healthcare, iGEMuOttawa.
+</li> <!----></ul></div></div> <h2>Leadership and management experience</h2> <div class="row job y-sep"><div class="col-md-4"><h3>Residence Mentor</h3> <p class="pl-3">University of Ottawa</p> <p class="pl-3 mb-2">2014 - 2017</p></div> <div class="col-md-8"><ul><li>Designed and piloted a mentors-in-residence program to provide full-time academic support to first-year students.
+</li><li>Increased funding for the Mentoring Centre by <strong>300%</strong> within a year.
+</li><li>Increased resident conversion rate <strong>by a factor of 10</strong> within a year.
+</li><li>Developed software to <strong>automate</strong> data entry and reduced bureaucratic workload from hours to a few minutes.
+</li><li>Organized weekly study groups and coordinated monthly <strong>community-building events</strong> for residents.
+</li> <!----></ul></div></div><div class="row job y-sep"><div class="col-md-4"><h3>President / Research Associate</h3> <p class="pl-3">University of Ottawa iGEM Team</p> <p class="pl-3 mb-2">2013 - 2016</p></div> <div class="col-md-8"><ul><li>Led <strong>iGEMuOttawa</strong>, a genetic engineering and synthetic biology research group made up of undergraduate student researchers.
+</li><li>Built <em>in vivo</em> genetic networks using computing and electronic engineering metaphors.
+</li><li>Oversaw the group&#39;s <strong>finances, fundraising, and hiring</strong>.
+</li><li>Wrote bioinformatics software for <strong>data analysis</strong> and genetic tooling.
+</li><li><strong>Presented own research</strong> three times at a world-wide conference in Boston, U.S.A..
+</li><li><strong>Consulted</strong> for a biotechnology startup in Ottawa.
+</li><li><strong>Secured sponsorship</strong> from universities and biotech companies.
+</li> <!----></ul></div></div><div class="row job y-sep"><div class="col-md-4"><h3>Founder</h3> <p class="pl-3">uEducate</p> <p class="pl-3 mb-2">2013</p></div> <div class="col-md-8"><ul><li>Founded <strong>uEducate</strong>, an organization dedicated to <strong>promoting higher education</strong> in science and technology.
+</li><li>Established an annual science competition for high school students in Ontario, Canada.
+</li><li><strong>Created financial scholarships</strong> for aspiring science students, in the amount of <strong>$4000</strong> in the first year and more in years after.
+</li> <!----></ul></div></div> <h2>Skills</h2> <div class="row mb-4"><div class="col-lg-4 x-sep d-flex flex-column align-items-center"><div class="px-3 mb-2 col col-sm-8 col-lg d-flex justify-content-between"><span>Java + Scala</span> <span style="whitespace:no-wrap;"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span></span></div><div class="px-3 mb-2 col col-sm-8 col-lg d-flex justify-content-between"><span>HTML</span> <span style="whitespace:no-wrap;"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span></span></div><div class="px-3 mb-2 col col-sm-8 col-lg d-flex justify-content-between"><span>CSS</span> <span style="whitespace:no-wrap;"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span></span></div><div class="px-3 mb-2 col col-sm-8 col-lg d-flex justify-content-between"><span>JS/Typescript/Node</span> <span style="whitespace:no-wrap;"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span></span></div><div class="px-3 mb-2 col col-sm-8 col-lg d-flex justify-content-between"><span>React/Vue</span> <span style="whitespace:no-wrap;"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span></span></div><div class="px-3 mb-2 col col-sm-8 col-lg d-flex justify-content-between"><span>Linux</span> <span style="whitespace:no-wrap;"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span></span></div></div><div class="col-lg-4 x-sep d-flex flex-column align-items-center"><div class="px-3 mb-2 col col-sm-8 col-lg d-flex justify-content-between"><span>Git</span> <span style="whitespace:no-wrap;"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span></span></div><div class="px-3 mb-2 col col-sm-8 col-lg d-flex justify-content-between"><span>Go</span> <span style="whitespace:no-wrap;"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="empty-star"></span></span></div><div class="px-3 mb-2 col col-sm-8 col-lg d-flex justify-content-between"><span>C#</span> <span style="whitespace:no-wrap;"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="empty-star"></span></span></div><div class="px-3 mb-2 col col-sm-8 col-lg d-flex justify-content-between"><span>C/C++</span> <span style="whitespace:no-wrap;"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="empty-star"></span></span></div><div class="px-3 mb-2 col col-sm-8 col-lg d-flex justify-content-between"><span>Python</span> <span style="whitespace:no-wrap;"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="empty-star"></span></span></div><div class="px-3 mb-2 col col-sm-8 col-lg d-flex justify-content-between"><span>SQL/RDBMS</span> <span style="whitespace:no-wrap;"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="empty-star"></span></span></div></div><div class="col-lg-4 x-sep d-flex flex-column align-items-center"><div class="px-3 mb-2 col col-sm-8 col-lg d-flex justify-content-between"><span>NoSQL</span> <span style="whitespace:no-wrap;"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="empty-star"></span></span></div><div class="px-3 mb-2 col col-sm-8 col-lg d-flex justify-content-between"><span>Mathematica</span> <span style="whitespace:no-wrap;"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="empty-star"></span></span></div><div class="px-3 mb-2 col col-sm-8 col-lg d-flex justify-content-between"><span>Matlab</span> <span style="whitespace:no-wrap;"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="empty-star"></span></span></div><div class="px-3 mb-2 col col-sm-8 col-lg d-flex justify-content-between"><span>Ruby</span> <span style="whitespace:no-wrap;"><span class="star"></span><span class="star"></span><span class="star"></span><span class="empty-star"></span><span class="empty-star"></span></span></div><div class="px-3 mb-2 col col-sm-8 col-lg d-flex justify-content-between"><span>Lisp/Scheme</span> <span style="whitespace:no-wrap;"><span class="star"></span><span class="star"></span><span class="empty-star"></span><span class="empty-star"></span><span class="empty-star"></span></span></div><div class="px-3 mb-2 col col-sm-8 col-lg d-flex justify-content-between"><span>Rust</span> <span style="whitespace:no-wrap;"><span class="star"></span><span class="star"></span><span class="empty-star"></span><span class="empty-star"></span><span class="empty-star"></span></span></div></div></div> <div class="row"><div class="col-lg-4 x-sep d-flex flex-column align-items-center"><div class="px-3 mb-2 col col-sm-8 col-lg d-flex justify-content-between"><span>English</span> <span>Native</span></div><div class="px-3 mb-2 col col-sm-8 col-lg d-flex justify-content-between"><span>Slovak</span> <span>Native</span></div></div><div class="col-lg-4 x-sep d-flex flex-column align-items-center"><div class="px-3 mb-2 col col-sm-8 col-lg d-flex justify-content-between"><span>Czech</span> <span>Native</span></div><div class="px-3 mb-2 col col-sm-8 col-lg d-flex justify-content-between"><span>French</span> <span>B2</span></div></div><div class="col-lg-4 x-sep d-flex flex-column align-items-center"><div class="px-3 mb-2 col col-sm-8 col-lg d-flex justify-content-between"><span>Spanish</span> <span>A2</span></div></div></div> <h2>Awards and certifications</h2> <div class="row justify-content-center y-sep"><div class="col-md-4 text-center mb-3"><h3>Cognos Prize</h3> <!----> <div>University of Ottawa</div> <div>2019</div> <div class="mt-2">For best thesis in Computer Science</div></div><div class="col-md-4 text-center mb-3"><h3>University Gold Medal</h3> <!----> <div>University of Ottawa</div> <div>2019</div> <div class="mt-2">For the highest standing in the faculty of Engineering</div></div><div class="col-md-4 text-center mb-3"><h3>Faculty Plaque</h3> <!----> <div>University of Ottawa</div> <div>2019</div> <div class="mt-2">For the highest standing in the Department of Computer Science</div></div><div class="col-md-4 text-center mb-3"><h3>Dean's Honour List</h3> <div>12 times of 12</div> <div>University of Ottawa</div> <div>2013 - 2019</div> <!----></div><div class="col-md-4 text-center mb-3"><h3>Undergraduate Research Scholarship</h3> <!----> <div>University of Ottawa</div> <div>2013</div> <div class="mt-2">One of 16 prestigious research positions awarded every year</div></div><div class="col-md-4 text-center mb-3"><h3>Grand Prize</h3> <!----> <div>Ottawa-Carleton Science and Engineering Olympics</div> <div>2012</div> <!----></div></div> <div class="row justify-content-center y-sep"><div class="col-md-4 text-center my-3"><h3>First Aid + CPR C + AED</h3> <a href="https://www.sja.ca/English/Courses-and-Training/Pages/Course%20Descriptions/Workplace-Courses.aspx">St. John's Ambulance</a></div><div class="col-md-4 text-center my-3"><h3>Non-Violent Crisis Intervention</h3> <a href="https://www.crisisprevention.com/What-We-Do/Nonviolent-Crisis-Intervention">Crisis Prevention Institute</a></div><div class="col-md-4 text-center my-3"><h3>Applied Suicide Intervention Skills Training (ASIST)</h3> <a href="https://www.livingworks.net/programs/asist/">LivingWorks</a></div></div> <h2>Selected works</h2> <div class="row justify-content-center"><div class="col-md-4 px-3 py-3"><div class="project card text-center"><!----> <div class="px-3 py-3"><h3>Share Tree DB</h3> <p>A distributed database system, based on blockchain, allowing the secure storage an sharing of data on untrusted hardware. Enables fine-grained and revokable permissioning while guaranteeing data integrity. Supports secure web-of-trust and user management.
+</p> <p><a href="r/ShareTreeDB.pdf" class="text-capitalize mr-2 d-inline-block">thesis</a></p></div></div></div><div class="col-md-4 px-3 py-3"><div class="project card text-center"><img src="r/tre.png" class="card-img-top"> <div class="px-3 py-3"><h3>The River Engine</h3> <p>Research project in creating an agent-based model for simulating the lives of fish in a river ecosystem. It can simulate natural or man-made perturbations in an ecosystem and predict their effects. Built with Java and JavaFX. Thesis included.
+</p> <p><a href="https://github.com/arthanzel/theriverengine/blob/master/Thesis.pdf" class="text-capitalize mr-2 d-inline-block">thesis</a><a href="http://github.com/arthanzel/theriverengine" class="text-capitalize mr-2 d-inline-block">code</a></p></div></div></div><div class="col-md-4 px-3 py-3"><div class="project card text-center"><img src="r/evaluatex.jpg" class="card-img-top"> <div class="px-3 py-3"><h3>Evaluatex</h3> <p>LaTeX and ASCIIMath evaluator for Javascript. Formerly written as a math parser for the <a href="http://github.com/arthanzel/quantumofcells">Quantum of Cells</a> differential equation solver, but usable as a standalone library. Written over the course of a weekend as an experiment in compilers and interpreters.
+</p> <p><a href="http://arthanzel.github.io/evaluatex" class="text-capitalize mr-2 d-inline-block">demo</a><a href="http://github.com/arthanzel/evaluatex" class="text-capitalize mr-2 d-inline-block">code</a></p></div></div></div></div></div>
+
+  <footer class="py-3 my-5 text-center invert">You found an easter egg. Bee happy!</footer>
+
+  <script type="text/javascript">
+    // Un-spamify
+    document.querySelectorAll('.base64').forEach(el => {
+      el.textContent = atob(el.textContent.substring(7));
+    });
+
+    // Links should open in new tabs
+    document.querySelectorAll('a').forEach(el => {
+      el.setAttribute('target', '_blank');
+    });
+
+    // Theme switch
+    document.querySelector('.theme-switcher').classList.add('d-md-block');
+    document.querySelector('.theme-switcher').addEventListener('click', e => {
+      document.body.classList.toggle('dark');
+    });
+  </script>
+</body>
+
+</html>

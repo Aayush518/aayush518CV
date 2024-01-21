@@ -1,0 +1,219 @@
+// Solarized colour palette
+base03    = #002b36;
+base02    = #073642;
+base01    = #586e75;
+base00    = #657b83;
+base0     = #839496;
+base1     = #93a1a1;
+base2     = #eee8d5;
+base3     = #fdf6e3;
+yellow    = #b58900;
+orange    = #cb4b16;
+red       = #dc322f;
+magenta   = #d33682;
+violet    = #6c71c4;
+blue      = #268bd2;
+cyan      = #2aa198;
+green     = #859900;
+
+// Domain style defs
+bgColor     = mix(#f3f3f3, base3, 75%);
+textColor   = base00;
+emphColor   = mix(base02, base01, 20%);
+headColor   = mix(blue, base01, 80%);
+titleColor  = emphColor;
+sepColor    = mix(base1, base2, 30%)
+
+bgColorDark     = base03;
+textColorDark   = base0;
+emphColorDark   = mix(base1, base2, 80%);
+headColorDark   = mix(blue, base01, 90%);
+titleColorDark  = emphColorDark;
+sepColorDark    = mix(base01, base02, 30%);
+
+bodyFont        = 'Open Sans', Arial, sans-serif;
+monoFont        = 'Source Code Pro', Consolas, monospace;
+
+themeTrans() {
+  transition: background-color 1s, color 1s, border-color 1s, box-shadow 1s;
+}
+
+colorScheme(bg, text, emph, head, title, sep, card, cardShadow, filter_) {
+  background-color: bg;
+  color: text;
+  themeTrans();
+  strong { color: emph; themeTrans(); }
+  h1, h2 { color: head; themeTrans(); }
+  h3 { color: title; themeTrans(); }
+  hr { border-color: sep; themeTrans(); }
+  .card {
+    background-color: card;
+    box-shadow: cardShadow
+    themeTrans();
+  }
+  .x-sep, .y-sep { border-color: sep; themeTrans(); }
+  .star, .half-star, .empty-star { filter: filter_; transition: filter 1s; }
+}
+
+// Light/dark color scheme defs
+body {
+  &:not(.dark) {
+    colorScheme(
+      bgColor,
+      textColor,
+      emphColor,
+      headColor,
+      titleColor,
+      sepColor,
+      lighten(bgColor, 50%), // Card background color
+      2px 2px 20px 0px darken(bgColor, 5%), // Card box shadow
+      opacity(50%), // Stars filter
+    );
+    a { color: blue; themeTrans(); }
+    .switch-theme { background-color: base02; border-color: base0; }
+  }
+
+  &.dark {
+    colorScheme(
+      bgColorDark,
+      textColorDark,
+      emphColorDark,
+      headColorDark,
+      titleColorDark,
+      sepColorDark,
+      lighten(bgColorDark, 3%),
+      2px 2px 20px 0px darken(bgColorDark, 10%),
+      invert() opacity(45%),
+    );
+    a { color: yellow; themeTrans(); }
+
+    .switch-theme {
+      background-color: base2;
+      border-color: base00;
+      themeTrans();
+    }
+  }
+}
+
+// Theme switcher
+.theme-switcher {
+  cursor: pointer;
+  font: 13px monoFont;
+  position: fixed;
+  right: 16px;
+  top: 16px;
+  &:hover span {
+    text-decoration: underline;
+  }
+  .switch-theme {
+    border-radius: 99px;
+    border-style: solid;
+    border-width: 0px;
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    vertical-align: middle;
+  }
+}
+
+// Layout
+
+body {
+  font: 500 16px bodyFont;
+
+  h3 {
+    font-family: bodyFont;
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  strong {
+    font-weight: 600;
+  }
+}
+
+p {
+  margin-bottom: 0.5rem;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+h1, h2 {
+  font-family: monoFont;
+  font-weight: 500;
+  margin-bottom: 16px;
+  margin-top: 20px;
+  position: relative;
+  &::before { position: absolute; }
+}
+
+h1::before {
+  content: "#";
+  left: -28px;
+  @media (max-width: 1020px) { display: none; }
+}
+
+h2::before {
+  content: "##";
+  left: -42px;
+  @media (max-width: 1020px) { display: none; }
+}
+
+hr {
+  border-style: dashed;
+}
+
+.lead {
+  font-weight: 400;
+}
+
+.star, .half-star, .empty-star {
+  background-repeat: no-repeat;
+  background-position: left center;
+  display: inline-block;
+  height: 1em;
+  vertical-align: baseline;
+  width: 16px;
+}
+
+.star {
+  background-image: url('data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgZm9jdXNhYmxlPSJmYWxzZSIgZGF0YS1wcmVmaXg9ImZhcyIgZGF0YS1pY29uPSJzdGFyIiBjbGFzcz0ic3ZnLWlubGluZS0tZmEgZmEtc3RhciBmYS13LTE4IiByb2xlPSJpbWciIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDU3NiA1MTIiPjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZD0iTTI1OS4zIDE3LjhMMTk0IDE1MC4yIDQ3LjkgMTcxLjVjLTI2LjIgMy44LTM2LjcgMzYuMS0xNy43IDU0LjZsMTA1LjcgMTAzLTI1IDE0NS41Yy00LjUgMjYuMyAyMy4yIDQ2IDQ2LjQgMzMuN0wyODggNDM5LjZsMTMwLjcgNjguN2MyMy4yIDEyLjIgNTAuOS03LjQgNDYuNC0zMy43bC0yNS0xNDUuNSAxMDUuNy0xMDNjMTktMTguNSA4LjUtNTAuOC0xNy43LTU0LjZMMzgyIDE1MC4yIDMxNi43IDE3LjhjLTExLjctMjMuNi00NS42LTIzLjktNTcuNCAweiI+PC9wYXRoPjwvc3ZnPg==');
+}
+
+.half-star {
+  background-image: url('data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgZm9jdXNhYmxlPSJmYWxzZSIgZGF0YS1wcmVmaXg9ImZhcyIgZGF0YS1pY29uPSJzdGFyLWhhbGYtYWx0IiBjbGFzcz0ic3ZnLWlubGluZS0tZmEgZmEtc3Rhci1oYWxmLWFsdCBmYS13LTE3IiByb2xlPSJpbWciIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDUzNiA1MTIiPjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZD0iTTUwOC41NSAxNzEuNTFMMzYyLjE4IDE1MC4yIDI5Ni43NyAxNy44MUMyOTAuODkgNS45OCAyNzkuNDIgMCAyNjcuOTUgMGMtMTEuNCAwLTIyLjc5IDUuOS0yOC42OSAxNy44MWwtNjUuNDMgMTMyLjM4LTE0Ni4zOCAyMS4yOWMtMjYuMjUgMy44LTM2Ljc3IDM2LjA5LTE3Ljc0IDU0LjU5bDEwNS44OSAxMDMtMjUuMDYgMTQ1LjQ4Qzg2Ljk4IDQ5NS4zMyAxMDMuNTcgNTEyIDEyMi4xNSA1MTJjNC45MyAwIDEwLTEuMTcgMTQuODctMy43NWwxMzAuOTUtNjguNjggMTMwLjk0IDY4LjdjNC44NiAyLjU1IDkuOTIgMy43MSAxNC44MyAzLjcxIDE4LjYgMCAzNS4yMi0xNi42MSAzMS42Ni0zNy40bC0yNS4wMy0xNDUuNDkgMTA1LjkxLTEwMi45OGMxOS4wNC0xOC41IDguNTItNTAuOC0xNy43My01NC42em0tMTIxLjc0IDEyMy4ybC0xOC4xMiAxNy42MiA0LjI4IDI0Ljg4IDE5LjUyIDExMy40NS0xMDIuMTMtNTMuNTktMjIuMzgtMTEuNzQuMDMtMzE3LjE5IDUxLjAzIDEwMy4yOSAxMS4xOCAyMi42MyAyNS4wMSAzLjY0IDExNC4yMyAxNi42My04Mi42NSA4MC4zOHoiPjwvcGF0aD48L3N2Zz4=');
+}
+
+.empty-star {
+  background-image: url('data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgZm9jdXNhYmxlPSJmYWxzZSIgZGF0YS1wcmVmaXg9ImZhciIgZGF0YS1pY29uPSJzdGFyIiBjbGFzcz0ic3ZnLWlubGluZS0tZmEgZmEtc3RhciBmYS13LTE4IiByb2xlPSJpbWciIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDU3NiA1MTIiPjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZD0iTTUyOC4xIDE3MS41TDM4MiAxNTAuMiAzMTYuNyAxNy44Yy0xMS43LTIzLjYtNDUuNi0yMy45LTU3LjQgMEwxOTQgMTUwLjIgNDcuOSAxNzEuNWMtMjYuMiAzLjgtMzYuNyAzNi4xLTE3LjcgNTQuNmwxMDUuNyAxMDMtMjUgMTQ1LjVjLTQuNSAyNi4zIDIzLjIgNDYgNDYuNCAzMy43TDI4OCA0MzkuNmwxMzAuNyA2OC43YzIzLjIgMTIuMiA1MC45LTcuNCA0Ni40LTMzLjdsLTI1LTE0NS41IDEwNS43LTEwM2MxOS0xOC41IDguNS01MC44LTE3LjctNTQuNnpNMzg4LjYgMzEyLjNsMjMuNyAxMzguNEwyODggMzg1LjRsLTEyNC4zIDY1LjMgMjMuNy0xMzguNC0xMDAuNi05OCAxMzktMjAuMiA2Mi4yLTEyNiA2Mi4yIDEyNiAxMzkgMjAuMi0xMDAuNiA5OHoiPjwvcGF0aD48L3N2Zz4=');
+}
+
+.job {
+  margin-top: 0;
+  padding-bottom: 8px;
+  & + & { padding-top: 8px; }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li + li { margin-top: 6px; }
+  }
+}
+
+.x-sep + .x-sep {
+  border-left: 1px dashed sepColor;
+  @media (max-width: 992px) {
+    border-left: 0;
+  }
+}
+
+.y-sep + .y-sep {
+  border-top: 1px dashed sepColor;
+}
+
+footer {
+  margin-top: 48px;
+  opacity: 0.05;
+  &::selection {background: 0;}
+}

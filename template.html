@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Martin Hanzel</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,600|Source+Code+Pro:500">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+  <!-- TODO: New favicons, and base64-embed them -->
+
+  <style type="text/css">
+/* stylesheet */
+  </style>
+</head>
+
+<body class="">
+  <!-- Change to dark theme at night -->
+  <script type="text/javascript">
+  const hour = new Date().getHours();
+  if (hour < 9 || hour >= 18) {
+    document.body.classList.add('dark');
+  }
+  </script>
+
+  <!-- TODO: Fade on change theme -->
+
+  <div class="theme-switcher d-none">
+    <span>switch theme</span>
+    <div class="switch-theme"></div>
+  </div>
+
+  <!-- content -->
+
+  <footer class="py-3 my-5 text-center invert">You found an easter egg. Bee happy!</footer>
+
+  <script type="text/javascript">
+    // Un-spamify
+    document.querySelectorAll('.base64').forEach(el => {
+      el.textContent = atob(el.textContent.substring(7));
+    });
+
+    // Links should open in new tabs
+    document.querySelectorAll('a').forEach(el => {
+      el.setAttribute('target', '_blank');
+    });
+
+    // Theme switch
+    document.querySelector('.theme-switcher').classList.add('d-md-block');
+    document.querySelector('.theme-switcher').addEventListener('click', e => {
+      document.body.classList.toggle('dark');
+    });
+  </script>
+</body>
+
+</html>
