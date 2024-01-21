@@ -1,9 +1,9 @@
-# Martin Hanzel's personal CV site
+# Aayush Adhikari's personal CV site
 
 ## How it's built
 - All information about me lives in `data.js`. This is the source of truth from which all is generated. It's a JS file primarily because JS object notation is more maintainable than plain JSON.
-- `data.js` is read and serialized into `martin-hanzel-cv.json`.
-- A Vue application is created from `components/App.vue` and rendered to an HTML string. The application's data source is `martin-hanzel-cv.json`.
+- `data.js` is read and serialized into `aayush-adhikari-cv.json`.
+- A Vue application is created from `components/App.vue` and rendered to an HTML string. The application's data source is `aayush-adhikari-cv.json`.
 - The stylesheet, `main.styl`, is compiled into a CSS string.
 - The HTML and CSS strings are injected into `template.html`, which includes any client-side scripts or resources that should be present in the final page.
 
