@@ -186,7 +186,7 @@
   "projects": [
     {
       "name": "Mi-Mi",
-      "image": "r/mimi.png",
+      "image": "r/homepage-min-1.png",
       "description": "Mitho-Mitho is a web application designed to let foodies search restaurants, track their eating history, as well as connect with friends. If you have trouble remembering what restaurants you’ve been to before, or what you’ve ordered at a restaurant that was good, then Mitho-Mitho is your go-to app. Search for restaurants by name or address. With the queried results, you can select and add a restaurant that you have visited to your own personal map, leaving behind a trail of Mitho-Mithos for your restaurant history. Connect with friends to see where your friends have dined at and what dishes they've tried. Mitho-Mitho is a social media network built for foodies.",
       "links": {
         "code": "https://github.com/Aayush518/Mitho-Mitho"
