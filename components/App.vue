@@ -73,6 +73,9 @@ const marked = require("marked");
       <br />
       <strong>gitlab</strong>:
       <a :href="data.contact.gitlab">{{ urlToHandle(data.contact.gitlab) }}</a>
+      <br />
+      <strong>linkedin</strong>:
+      <a :href="data.contact.linkedin">{{ urlToHandle(data.contact.linkedin) }}</a>
     </p>
     <p v-for="text in data.bio" :key="text" v-html="markdown(text)"></p>
     <hr />
@@ -106,11 +109,11 @@ const marked = require("marked");
       <div class="col-lg-4 x-sep d-flex flex-column align-items-center" v-for="(skillCol, i) in splitArray(skills, 3)" :key="i">
         <div
           class="px-3 mb-2 col col-sm-8 col-lg d-flex justify-content-between"
-          v-for="[name, rating] in skillCol"
+          v-for="[name] in skillCol"
           :key="name"
         >
           <span>{{name}}</span>
-          <Stars :num="rating" />
+          <!-- <Stars :num="rating" /> -->
         </div>
       </div>
     </div>
